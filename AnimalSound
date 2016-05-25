@@ -1,31 +1,21 @@
 public class AnimalSound{
   public static void main(String[] args){     
+
     
-    String[] Animal;  
     Animal[] zoo = new Animal[5];
-    
-    String[] my_zoo = {"lion","cat","mouse","dog","duck","hen"};
-    all_sound(my_zoo);
-    
-  }
-  
-  
-  public static void all_sound(Animal[] zoo){
-    
     zoo[0] = new Animal("lion", "roar");   
     zoo[1] = new Animal("cat", "meow");
     zoo[2] = new Animal("mouse", "squeak");
     zoo[3] = new Animal("dog", "woof");
     zoo[4] = new Animal("duck", "quack");
-    zoo[5] = new Animal("hen", "cluck");
+    all_sounds(zoo);    
+  }  
+  
+  public static void all_sounds(Animal[] zoo){
     
-    System.out.println(zoo[0]);
-    System.out.println(zoo[1]);
-    System.out.println(zoo[2]);
-    System.out.println(zoo[3]);
-    System.out.println(zoo[4]);
-    System.out.println(zoo[5]);
-    
+    for(int i =0; i<5; i++){
+      System.out.println(zoo[i].name +" goes "+zoo[i].sound);
+    }
   }  
 }
 
